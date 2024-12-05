@@ -66,10 +66,9 @@ export const CityWeather = () => {
              setLoading(false);
           })
           .catch((error : any) =>{
-            console.log(error)
-            alert(
-              "Error"
-            )}
+            alert('An error occured! Please verify the City\'s name or try again later')
+            setLoading(false);
+          }
           );
       };
     

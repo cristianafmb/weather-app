@@ -11,7 +11,7 @@ export const NavbarLayout: FC<FormType> = (props) => {
     <ContainerSwitch>
       <BgNavBar />
       <Navbar expand="lg" className="">
-        <Container>
+        <Container className="main-container">
           <Navbar.Brand href="/">Weather App</Navbar.Brand>
           <CityForm getWeather={props.getWeather} setCity={props.setCity} city={props.city} />
         </Container>
@@ -20,6 +20,11 @@ export const NavbarLayout: FC<FormType> = (props) => {
 }
 
 export const ContainerSwitch = styled.div`
+.main-container{
+  @media (max-width: 990px){
+    display: inline !important;
+  }
+}
 .navbar-brand{
     background-color: white !important;
     border-radius: 0.375rem !important;

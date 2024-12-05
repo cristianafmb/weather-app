@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 export const CityForm: FC<FormType> = (props) => {
   const { city, setCity, getWeather } = props;
+  console.log(getWeather)
   return (
     <ContainerSearch>
       <form onSubmit={getWeather}>
